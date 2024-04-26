@@ -29,6 +29,10 @@ namespace Webserv
 		struct sockaddr_in get_address() { return m_address; }
 		int get_socket() { return m_socket; }
 		int get_connection() { return connection; }
+	
+		// Setters
+		void set_connection(int connection) { connection = connection; }
+		
 	};
 } // namespace HDE
 

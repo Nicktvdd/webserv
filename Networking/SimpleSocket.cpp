@@ -12,10 +12,6 @@ Webserv::SimpleSocket::SimpleSocket(int domain, int service, int protocol, int p
 	// Create a socket
 	m_socket = socket(domain, service, protocol);
 	test_connection(m_socket);
-
-	// Connect to network
-	connection = connect_to_network(m_socket, m_address); // Connect to network
-	test_connection(connection);
 }
 
 // Test connection virtual function
@@ -46,4 +42,11 @@ int Webserv::SimpleSocket::get_socket()
 int Webserv::SimpleSocket::get_connection()
 {
 	return connection;
+}
+
+// Setters
+
+void Webserv::SimpleSocket::set_connection(int connection)
+{
+	connection = connection;
 }
