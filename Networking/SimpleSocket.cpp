@@ -1,6 +1,6 @@
 #include "SimpleSocket.hpp"
 
-HDE::SimpleSocket::SimpleSocket(int domain, int service, int protocol, int port, u_long interface)
+Webserv::SimpleSocket::SimpleSocket(int domain, int service, int protocol, int port, u_long interface)
 {
 	// Define address structure
 	m_address.sin_family = domain; // AF_INET
@@ -10,13 +10,13 @@ HDE::SimpleSocket::SimpleSocket(int domain, int service, int protocol, int port,
 	// Create a socket
 	m_socket = socket(domain, service, protocol);
 	test_connection(m_socket);
-	
+
 	// Connect to network
 	connection = connect_to_network(m_socket, m_address); // Connect to network
 	test_connection(connection);
 }
 
-void HDE::SimpleSocket::test_connection(int connection)
+void Webserv::SimpleSocket::test_connection(int connection)
 {
 	if (connection == -1)
 	{
@@ -24,4 +24,19 @@ void HDE::SimpleSocket::test_connection(int connection)
 		exit(EXIT_FAILURE);
 		// Error handling
 	}
+}
+
+struct sockaddr_in Webserv::SimpleSocket::get_address()
+{
+	return m_address;
+}
+
+int Webserv::SimpleSocket::get_socket()
+{
+	return m_socket;
+}
+
+int Webserv::SimpleSocket::get_connection()
+{
+	return connection;
 }
