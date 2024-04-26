@@ -1,5 +1,7 @@
 #include "SimpleSocket.hpp"
 
+// Default constructor
+
 Webserv::SimpleSocket::SimpleSocket(int domain, int service, int protocol, int port, u_long interface)
 {
 	// Define address structure
@@ -16,8 +18,11 @@ Webserv::SimpleSocket::SimpleSocket(int domain, int service, int protocol, int p
 	test_connection(connection);
 }
 
+// Test connection virtual function
+
 void Webserv::SimpleSocket::test_connection(int connection)
 {
+	// Confirms connection to network
 	if (connection == -1)
 	{
 		perror("Error connecting to network");
@@ -25,6 +30,8 @@ void Webserv::SimpleSocket::test_connection(int connection)
 		// Error handling
 	}
 }
+
+// Getters
 
 struct sockaddr_in Webserv::SimpleSocket::get_address()
 {

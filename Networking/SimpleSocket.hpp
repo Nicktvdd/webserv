@@ -15,9 +15,14 @@ namespace Webserv
 		int m_socket;
 		int connection;
 	public:
+	// Constructor
 		SimpleSocket(int domain, int service, int protocol, int port, 
 		u_long interface);
+		
+		// Virtual function to connect to network
 		virtual int connect_to_network(int sock, struct sockaddr_in address) = 0;
+		
+		// Function to test connection
 		void test_connection(int);
 
 		// Getters
