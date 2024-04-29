@@ -26,27 +26,3 @@ void Webserv::SimpleSocket::test_connection(int connection)
 		// Error handling
 	}
 }
-
-// Getters
-
-struct sockaddr_in Webserv::SimpleSocket::get_address()
-{
-	return m_address;
-}
-
-int Webserv::SimpleSocket::get_socket()
-{
-	return m_socket;
-}
-
-int Webserv::SimpleSocket::get_connection()
-{
-	return connection;
-}
-
-// Setters
-
-void Webserv::SimpleSocket::set_connection(int connection)
-{
-	connection = connection;
-}

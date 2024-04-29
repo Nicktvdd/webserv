@@ -40,6 +40,6 @@ namespace Webserv
 		void set_connection(int connection) { connection = connection; }
 		
 	};
-} // namespace HDE
+} // namespace Webserv
 
 #endif /* SimpleSocket_hpp */
