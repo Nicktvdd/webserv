@@ -4,7 +4,7 @@
 
 #include <stdio.h>
 #include <unistd.h>
-#include <cstring.h>
+#include <cstring>
 
 #include "SimpleServer.hpp"
 
@@ -19,8 +19,7 @@ namespace Webserv {
         void responder();
     public:
         // Constructor
-        TestServer(int domain, int service, int protocol, 
-            int port, u_long interface, int backlog);
+        TestServer();
         void launch();
     };
 }

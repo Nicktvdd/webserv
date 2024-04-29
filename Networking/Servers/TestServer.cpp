@@ -1,7 +1,7 @@
 #include "TestServer.hpp"
 
-void Webserv::TestServer() : SimpleServer(AF_INET, SOCK_STREAM, 0, 8080, INADDR_ANY, 3)//3 is backlog max {
-    // Constructor
+Webserv::TestServer::TestServer() : SimpleServer(AF_INET, SOCK_STREAM, 0, 8080, INADDR_ANY, 3){
+    launch();
 } 
 
 void Webserv::TestServer::accepter() {

@@ -3,6 +3,6 @@
 
 #include <stdio.h>
 
-#include "Networking/Sockets/webserv-sockets.hpp"
+#include "Sockets/webserv-sockets.hpp"
 
 #endif /* webserver_networking_hpp */
