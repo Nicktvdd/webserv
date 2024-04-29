@@ -1,8 +1,8 @@
-#include ConnectingSocket.hpp
+#include "ConnectingSocket.hpp"
 
 // Constructor
 
-Webserv::ConnectingSocket::ConnectingSocket(int domain, int service, int protocol, int port, u_long interface) {
+Webserv::ConnectingSocket::ConnectingSocket(int domain, int service, int protocol, int port, u_long interface): SimpleSocket(domain, service, protocol, port, interface){
     // Call the parent constructor
   //  SimpleSocket(domain, service, protocol, port, interface);
     // Set the connection

@@ -3,10 +3,10 @@
 
 #include <stdio.h>
 
-#include "bindingsocket.hpp"
+#include "BindingSocket.hpp"
 
-namespace webserv {
-    class ListeningSocket
+namespace Webserv {
+    class ListeningSocket: public BindingSocket
 {
     private:
         int m_backlog;

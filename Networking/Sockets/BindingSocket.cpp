@@ -1,6 +1,6 @@
-#include "bindingsocket.hpp"
+#include "BindingSocket.hpp"
 
-Webserv::Bindingsocket::BindingSocket(int domain, int service, int protocol, int port, u_long interface) 
+Webserv::BindingSocket::BindingSocket(int domain, int service, int protocol, int port, u_long interface) 
 : SimpleSocket(domain, service, protocol, port, interface) {
 	
 	set_connection(connect_to_network(get_socket(), get_address()));
@@ -9,5 +9,5 @@ Webserv::Bindingsocket::BindingSocket(int domain, int service, int protocol, int
 
 // Defenition of the connect_to_network virtual function
 int Webserv::BindingSocket::connect_to_network(int sock, struct sockaddr_in address) {
-	return bind(sock, (struct sockaddr*)&address, sizeof(address);
+	return bind(sock, (struct sockaddr*)&address, sizeof(address));
 }
