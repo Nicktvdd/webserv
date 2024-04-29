@@ -7,6 +7,7 @@ Webserv::Bindingsocket::BindingSocket(int domain, int service, int protocol, int
 	test_connection(get_connection());
 }
 
+// Defenition of the connect_to_network virtual function
 int Webserv::BindingSocket::connect_to_network(int sock, struct sockaddr_in address) {
 	return bind(sock, (struct sockaddr*)&address, sizeof(address);
 }
